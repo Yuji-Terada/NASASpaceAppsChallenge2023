@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planetary Tourism Office</title>
+
+        <!--GoogleFonts読み込み-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!--GoogleIcons読み込み-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+
+        <!--CSS読み込み-->
+        <link rel="stylesheet" href="./asset/reset.css">
+
+        <link rel="stylesheet" href="./asset/style.css">
+
+        <!--アイコン読み込み-->
+        <script src="https://kit.fontawesome.com/2cd68e5bc6.js" crossorigin="anonymous"></script>
+
+        <!--3D(globe.gl)読み込み-->
+        <script src="//unpkg.com/globe.gl"></script>
+
+        <!--その他色々読み込み-->
+        <meta property="og:title" content="Planetary Tourism Office">
+        <meta property="og:url" content="SNS用URL">
+        <meta property="og:image" content="./image/shrinked.jpg">
+    </head>
+
+    <body>
+        <!--ヘッダー部分-->
+        <header>
+            <a href="./index.html" id="home">
+                <span class="material-symbols-outlined">home</span>
+            </a>
+            <span id="header-span"></span>
+            <a href="#" class="nav">About</a>
+            <a href="http://sajk.waitwg.org:8080/blog" class="nav">Review</a>
+            <a href="./-compare/compare.html" class="nav">Compare</a>
+            <a href="#" class="nav">Cost</a>
+        </header>
+
+        <!--背景画像-->
+        <img src="./image/quote-bgi.jpg" id="quote-img" alt="background">
+
+        <!--引用文-->
+        <div id="quote-container-container">
+            <div id="quote-container">
+                <p id="quote">That's one small step for (a) man,<br>one giant leap for mankind.</p>
+            </div>
+        </div>
+        
+        <!--メイン部分-->
+        <main>
+            <!--デスクリプションエリア-->
+            <div id="description">
+                <p id="desc-title">Touch the Universe</p>
+                <p id="desc-context">
+                    Can you imagine if you were in zero-gravity world? Or can you imagine if you were an astronaut?<br>
+                    We can do.<br>
+                    We can go to the space. We can catch the stars. We can feel non-gravity. We can see many beautiful space objects. We can land on the moon. We can see rising of the sun in mars.<br>
+                    <strong>WE CAN SEIZE THE UNIVERSE.</strong><br>
+                    Now, let's go.
+                </p>
+            </div>
+
+            <!--画像ギャラリーエリア-->
+            <div class="gallery-wrap">
+                <ul class="gallery-list gallery-list-left">
+                    <li class="gallery-item"><img src="./image/gallery/1.jpg" alt="rocket"></li>
+                    <li class="gallery-item"><img src="./image/gallery/2.jpg" alt="jupiter"></li>
+                    <li class="gallery-item"><img src="./image/gallery/3.jpg" alt="mars-field"></li>
+                    <li class="gallery-item"><img src="./image/gallery/4.jpg" alt="mercury"></li>
+                    <li class="gallery-item"><img src="./image/gallery/5.jpg" alt="saturn-ring"></li>
+                    <li class="gallery-item"><img src="./image/gallery/6.jpg" alt="venus-mountain"></li>
+                    <li class="gallery-item"><img src="./image/gallery/7.jpg" alt="mecury-crater"></li>
+                </ul>
+                <ul class="gallery-list gallery-list-left">
+                    <li class="gallery-item"><img src="./image/gallery/1.jpg" alt="rocket"></li>
+                    <li class="gallery-item"><img src="./image/gallery/2.jpg" alt="jupiter"></li>
+                    <li class="gallery-item"><img src="./image/gallery/3.jpg" alt="mars-field"></li>
+                    <li class="gallery-item"><img src="./image/gallery/4.jpg" alt="mercury"></li>
+                    <li class="gallery-item"><img src="./image/gallery/5.jpg" alt="saturn-ring"></li>
+                    <li class="gallery-item"><img src="./image/gallery/6.jpg" alt="venus-mountain"></li>
+                    <li class="gallery-item"><img src="./image/gallery/7.jpg" alt="mecury-crater"></li>
+                </ul>
+            </div>
+
+            <!--目的地選択エリア-->
+            <div id="choice">
+                <div id="choice-description">
+                    <p id="choice-desc-title">Where Shall We Go?</p>
+                    <p id="choice-desc-context">
+                        Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune...<br>
+                        You can go anywhere you like. Your journey starts from now, and the journey will not stop until you'll die. 
+                    </p>
+                </div>
+                <div id="choice-planet">
+                    <a href="./ASANASA/MERCURY/mercury.html" class="choice-planet-item">
+                        <img src="./image/choice/1.jpg" alt="mercury">
+                        <p>Mercury</p>
+                    </a>
+                    <a href="./ASANASA/VENUS/venus.html" class="choice-planet-item">
+                        <img src="./image/choice/2.jpg" alt="venus">
+                        <p>Venus</p>
+                    </a>
+                    <a href="./ASANASA/EARTH/earth.html" class="choice-planet-item">
+                        <img src="./image/choice/3.jpg" alt="earth">
+                        <p>Earth</p>
+                    </a>
+                    <a href="./ASANASA/MARS/mars.html" class="choice-planet-item">
+                        <img src="./image/choice/4.jpg" alt="mars">
+                        <p>Mars</p>
+                    </a>
+                    <a href="./ASANASA/JUPITER/jupiter.html" class="choice-planet-item">
+                        <img src="./image/choice/5.jpg" alt="jupiter">
+                        <p>Jupiter</p>
+                    </a>
+                    <a href="./ASANASA/SATURN/saturn.html" class="choice-planet-item">
+                        <img src="./image/choice/6.jpg" alt="saturn">
+                        <p>Saturn</p>
+                    </a>
+                    <a href="./ASANASA/URANUS/uranus.html" class="choice-planet-item">
+                        <img src="./image/choice/7.jpg" alt="uranus">
+                        <p>Uranus</p>
+                    </a>
+                    <a href="./ASANASA/NEPTUNE/neptune.html" class="choice-planet-item">
+                        <img src="./image/choice/8.jpg" alt="neptune">
+                        <p>Neptune</p>
+                    </a>
+                    <a href="" class="choice-planet-item">
+                        <img src="./image/choice/9.jpg" alt="others">
+                        <p>Others</p>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>
+                This website is made for NASA Space Apps Challenge Kushimoto 2023.
+            </p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="./asset/main.js"></script>
+    </body>
+</html>
