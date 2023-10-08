@@ -1,0 +1,473 @@
+@charset "utf-8";
+
+html, body{
+    width: 100%;
+    height: auto;
+    /*
+    background-color: #090909;
+    */
+    background-color: #0C0838;
+    
+    font-size: 10px;
+    font-family: "Montserrat", "Alatsi", "DM Serif Display";
+}
+
+/*==============================*/
+
+header{
+    width: 100%;
+    height: 10%;
+    background-color: #f0f0f055;
+
+    display: flex;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    
+    transform: translateY(-10vh);
+    transition: all .8s;
+}
+
+header.appear{
+    transform: translateY(0);
+}
+
+#home{
+    width: 7.5rem;
+    height: 100%;
+
+    display: block;
+
+    text-align: center;
+    line-height: 10vh;
+    font-size: 4rem;
+    font-family: "Alatsi";
+    color: #bcbcbc;
+    text-decoration: none;
+
+    transition: all .25s;
+}
+
+#header-span{
+    width: calc(100% - 7.5rem - calc(12.5rem * 4));
+    display: block;
+}
+
+header .nav{
+    width: 12.5rem;
+    height: 100%;
+
+    display: block;
+
+    text-align: center;
+    line-height: 10vh;
+    font-size: 2.5rem;
+    font-family: "Alatsi";
+    font-weight: normal;
+    color: #bcbcbc;
+    text-decoration: none;
+
+    transition: all .25s;
+}
+
+#home:hover, header .nav:hover{
+    color: #f0f0f0;
+}
+
+a .material-symbols-outlined{
+    font-size: 5rem;
+    line-height: 10vh;
+}
+
+/*==============================*/
+
+#quote-img{
+    width: 100%;
+    height: 270vh;
+    display: block;
+    
+    margin: 0 auto 0 auto;
+    z-index: -1;
+
+    object-fit: cover;
+}
+
+#quote-container-container{
+    width: 100%;
+    height: 260vh;
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#quote-container{
+    width: 40%;
+    display: block;
+
+    padding: 2rem;
+
+    position: sticky;
+    top: 40vh;
+    left: calc(30% - 2rem);
+
+    background-color: #f0f0f055;
+    backdrop-filter: blur(0.25rem);
+
+    border-radius: 1rem;
+    border-bottom: #f0f0f0cc 1px solid;
+    border-right: #f0f0f0cc 1px solid;
+
+    text-align: center;
+
+    transition: all .8s;
+    transform: scale(0);
+}
+
+#quote-container.appear{
+    transform: scale(1);
+}
+
+#quote{
+    width: 100%;
+    display: block;
+
+    font-size: 4rem;
+    font-family: "DM serif display";
+    font-weight: normal;
+    line-height: 5.5rem;
+    letter-spacing: 0.1rem;
+    color: #f0f0f0;
+}
+
+#quote::after{
+    content: "Neil Armstrong (1930-2012)";
+    display: block;
+
+    font-size: 2.25rem;
+    font-family: "DM serif display";
+    font-weight: normal;
+    line-height: 5rem;
+    color: #f0f0f0;
+}
+
+/*==============================*/
+
+main{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+main #description{
+    width: 40%;
+    display: block;
+
+    padding: 10rem 30%;
+
+    background-color: #0C0838;
+
+    text-align: justify;
+}
+
+#description #desc-title{
+    width: 100%;
+    display: block;
+
+    font-size: 3rem;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 7.5rem;
+    color: #f0f0f0;
+}
+
+#description #desc-context{
+    width: 100%;
+    display: block;
+
+    font-size: 1.75rem;
+    font-family: "Montserrat";
+    font-weight: 400;
+    line-height: 3rem;
+    color: #f0f0f0;
+}
+
+#desc-context strong{
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 5rem;
+}
+
+/*==============================*/
+
+@keyframes infinity-scroll-right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.gallery-wrap {
+    width: 100%;
+    height: 30vh;
+
+    margin: 0;
+
+    display: flex;
+    overflow: hidden;
+}
+
+.gallery-list {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+.gallery-list-left{
+    animation :infinity-scroll-right 50s infinite linear both;
+}
+
+.gallery-item {
+    width: calc(100vw / 4.5);
+    height: 100%;
+}
+.gallery-item > img{
+    width: 100%;
+    height: 100%;
+
+    filter: brightness(0.65);
+
+    object-fit: cover;
+
+    transition: all 0.25s;
+}
+
+.gallery-item > img:hover{
+    filter: brightness(1);
+}
+
+/*==============================*/
+
+#choice{
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    margin: 3rem 0;
+}
+
+#choice-description{
+    width: 100%;
+
+    margin: 0;
+    padding: 5rem 0;
+
+    background-color: #0C0838;
+    font-family: "Montserrat";
+    text-align: justify;
+    color: #f0f0f0;
+}
+
+#choice-desc-title{
+    width: 40%;
+    display: block;
+
+    margin: 0 auto 0 auto;
+
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 7.5rem;
+}
+
+#choice-desc-context{
+    width: 40%;
+    display: block;
+
+    margin: 0 auto 0 auto;
+
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 3rem;
+}
+
+#choice-planet{
+    width: 50%;
+    height: auto;
+    display: grid;
+    
+    margin: 0 auto;
+
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    background-color: #0C0838;
+}
+
+.choice-planet-item{
+    width: auto;
+    height: auto;
+    display: block;
+
+    aspect-ratio: 1/1.2;
+    
+    text-decoration: none;
+}
+
+.choice-planet-item img{
+    width: 100%;
+    display: block;
+
+    border-radius: 2rem 2rem 0 0;
+
+    filter: grayscale(1);
+
+    object-fit: cover;
+    aspect-ratio: 1/1;
+
+    transition: all .25s;
+}
+
+.choice-planet-item img:hover{
+    filter: grayscale(0);
+}
+
+.choice-planet-item p{
+    width: 100%;
+    height: auto;
+    display: block;
+
+    margin: auto;
+
+    background-color: #f0f0f0;
+
+    border-radius: 0 0 2rem 2rem;
+
+    color: #090909;
+    font-weight: 500;
+    font-family: "Montserrat";
+    font-size: 2rem;
+    line-height: 6rem;
+    text-align: center;
+    text-decoration: underline solid #0C083800 0.7rem;
+
+    aspect-ratio: 1/0.2;
+
+    transition: all 0.25s;
+}
+
+.choice-planet-item:hover p{
+    font-weight: 700;
+    text-decoration: underline solid #0C0838ff 0.7rem;
+}
+
+/*==============================*/
+
+footer{
+    width: 100%;
+    height: auto;
+    display: block;
+
+    margin-top: 5rem;
+
+    background-color: #f0f0f0;
+}
+
+footer p{
+    width: 60%;
+    display: block;
+
+    margin: auto;
+    padding: 2rem 0;
+
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.75rem;
+}
+
+
+/*==============================*/
+/*==============================*/
+/*==============================*/
+
+@media screen and (max-width: 900px) {
+    html{
+        -webkit-text-size-adjust: 100%;
+        font-size: 8px;
+    }
+
+    header{
+        height: 7%;
+    }
+
+    #header-span{
+        display: none;
+    }
+
+    header .nav{
+        width: calc(calc(100% - 7.5rem)/4);
+        line-height: 7vh;
+        font-size: 1.75rem;
+        color: #f0f0f0;
+    }
+
+    #home{
+        line-height: 7vh;
+    }
+
+    a .material-symbols-outlined{
+        font-size: 3rem;
+        line-height: 7vh;
+        color: #f0f0f0;
+    }
+
+    #quote-container{
+        width: 80%;
+
+        padding: 1%;
+
+        left: 9%;
+    }
+
+    main #description{
+        width: 80%;
+
+        padding: 2rem 10%;
+    }
+
+    .gallery-wrap {
+        height: 10vh;
+    }
+
+    .gallery-item {
+        width: calc(100vw / 2.5);
+    }
+
+    .gallery-item > img{
+        filter: brightness(1);
+    }
+
+    #choice-desc-title{
+        width: 80%;
+    }
+    
+    #choice-desc-context{
+        width: 80%;
+    }
+
+    .choice-planet-item img{
+        filter: grayscale(0);
+    }
+
+    .choice-planet-item p{
+        font-weight: 700;
+        text-decoration: underline solid #0C0838ff 0.7rem;
+    }
+}
